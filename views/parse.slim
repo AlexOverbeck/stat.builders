@@ -1,0 +1,10 @@
+table
+  thead
+    tr
+      - @csv.headers.each do |header|
+        th= header
+  tbody
+    - @csv.each do |row|
+      tr
+        - row.each do |column|
+          td=column.last
